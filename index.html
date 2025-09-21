@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HUMAAN | Mental Wellness Platform</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6B46C1;
+      --primary-dark: #4A148C;
+      --secondary: #00ACC1;
+      --secondary-dark: #00796B;
+      --accent: #FBC02D;
+      --accent-dark: #F9A825;
+      --text-dark: #333;
+      --text-light: #555;
+      --bg-light: #F9F8FC;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.8;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 18px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #E9D8FD;
+    }
+
+    .section {
+      padding: 80px 10% 100px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .section p {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-light);
+      max-width: 850px;
+    }
+
+    .btn {
+      border: none;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 28px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    /* Hero Section */
+    #home {
+      background: linear-gradient(135deg, #F3E8FF, #E9D8FD);
+      text-align: center;
+    }
+
+    #home h2 {
+      font-size: 36px;
+      color: var(--primary-dark);
+    }
+
+    #home p {
+      margin: 20px auto;
+    }
+
+    .btn-home {
+      background-color: var(--primary);
+      color: white;
+      box-shadow: 0 6px 16px rgba(107, 70, 193, 0.3);
+    }
+
+    .btn-home:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    /* About */
+    #about {
+      background: linear-gradient(to right, #E0F7FA, #B2EBF2);
+      color: var(--secondary-dark);
+    }
+
+    .btn-about {
+      background-color: var(--secondary);
+      color: white;
+      box-shadow: 0 6px 14px rgba(0, 172, 193, 0.4);
+    }
+
+    .btn-about:hover {
+      background-color: var(--secondary-dark);
+      transform: translateY(-3px);
+    }
+
+    /* Features */
+    #features {
+      background: linear-gradient(to right, #FFFDE7, #FFF9C4);
+      color: var(--accent-dark);
+    }
+
+    .btn-features {
+      background-color: var(--accent);
+      color: white;
+      box-shadow: 0 6px 14px rgba(251, 192, 45, 0.4);
+    }
+
+    .btn-features:hover {
+      background-color: var(--accent-dark);
+      transform: translateY(-3px);
+    }
+
+    .features ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 25px;
+    }
+
+    .features ul li {
+      margin-bottom: 16px;
+      padding-left: 28px;
+      position: relative;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .features ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      background-color: var(--primary);
+      color: white;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HUMAAN</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#features">Features</a>
+    </nav>
+  </header>
+
+  <section id="home" class="section hero">
+  <div class="hero-content">
+    <img src="logo.png" alt="HUMAAN Logo" class="hero-logo">
+    <h2 class="hero-subtitle">Your Mental Health Matters 🧠✨</h2>
+
+    <p class="hero-text">
+      At <strong>HUMAAN</strong>, we are here to walk beside you in your wellness journey.  
+      Whether you're facing stress, anxiety, or just seeking balance, our platform provides compassionate support, guidance, and tools to help you thrive.  
+      <br><br>
+      🌟 You’re never alone — let’s take the first step together. 💜
+    </p>
+
+    <div class="hero-buttons">
+      <a href="login.html" class="btn btn-home">Get Started</a>
+    </div>
+  </div>
+</section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+      <strong>HUMAAN</strong> is a compassionate platform powered by technology to help people manage their mental wellness.  
+      Whether you're seeking clarity, need someone to talk to, or want helpful resources, we’re here for you.  
+      <br><br>
+      Our mission is to break the stigma surrounding mental health and provide a safe, judgment-free space for healing, growth, and self-discovery.
+    </p>
+    <a href="login.html" class="btn btn-about">Try Now</a>
+  </section>
+
+  <section id="features" class="section features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>AI-powered chatbot available 24/7</li>
+      <li>Mental Health & Academic Wellness Quiz</li>
+      <li>Personalized wellness tips and resources</li>
+      <li>Secure, private, and anonymous conversations</li>
+      <li>Calming, intuitive user experience</li>
+      <li>Professional consultant connections</li>
+      <li>Resource hub with articles, activities, and tools</li>
+    </ul>
+    <a href="login.html" class="btn btn-features">Explore Now</a>
+  </section>
+
+  <footer>
+    © 2025 HUMAAN — All Rights Reserved.
+  </footer>
+
+</body>
+</html>

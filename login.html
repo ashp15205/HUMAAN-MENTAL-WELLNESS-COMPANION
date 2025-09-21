@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <title>HUMAAN - Login/SignUp</title>
+  <link rel="icon" href="./logo.png" type="image/png" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./login.css" />
+</head>
+<body>
+  <div class="section">
+    <div class="container">
+      <div class="row full-height justify-content-center">
+        <div class="col-12 text-center align-self-center py-5">
+          <div class="section pt-5 pt-sm-2 text-center">
+            
+            <!-- Logo + Heading -->
+            <a href="#">
+              <img src="./logo.png" alt="Company Logo" id="logo" style="height: 65px; border-radius: 40%;" />
+              <h2 class="brand-title">HUMAAN</h2>
+            </a>
+
+            <!-- Tabs -->
+            <h6 class="mb-0 pb-3">
+              <span id="loginText" class="active-tab" onclick="setTab(false)">Log In</span>
+              <span id="signupText" onclick="setTab(true)">Sign Up</span>
+            </h6>
+
+            <input class="checkbox" type="checkbox" id="reg-log" onchange="updateActiveTab()" />
+            <label for="reg-log"></label>
+
+            <!-- Card -->
+            <div class="card-3d-wrap mx-auto">
+              <div class="card-3d-wrapper">
+
+                <!-- Login -->
+                <div class="card-front">
+                  <div class="center-wrap">
+                    <form class="section text-center" id="loginForm">
+                      <h4 class="mb-4 pb-3">Log In</h4>
+                      <div class="form-group">
+                        <input type="email" name="email" class="form-style" placeholder="Email" required />
+                        <i class="input-icon uil uil-at"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="password" name="password" class="form-style" placeholder="Password" required />
+                        <i class="input-icon uil uil-lock-alt"></i>
+                      </div>
+                      <button type="submit" class="btn mt-4">Login</button>
+                      <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Signup -->
+                <div class="card-back">
+                  <div class="center-wrap">
+                    <form class="section text-center" id="signupForm">
+                      <h4 class="mb-3 pb-3">Sign Up</h4>
+                      <div class="form-group">
+                        <input type="text" class="form-style" name="full_name" placeholder="Full Name" required />
+                        <i class="input-icon uil uil-user"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="tel" class="form-style" name="phone_number" placeholder="Phone Number" required />
+                        <i class="input-icon uil uil-phone"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="email" class="form-style" name="email" placeholder="Email" required />
+                        <i class="input-icon uil uil-at"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="password" class="form-style" name="password" placeholder="Password" required />
+                        <i class="input-icon uil uil-lock-alt"></i>
+                      </div>
+                      <button type="submit" class="btn mt-4">Register</button>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Switch -->
+  <script>
+    function updateActiveTab() {
+      const loginText = document.getElementById("loginText");
+      const signupText = document.getElementById("signupText");
+      const checkbox = document.getElementById("reg-log");
+
+      if (checkbox.checked) {
+        signupText.classList.add("active-tab");
+        loginText.classList.remove("active-tab");
+      } else {
+        loginText.classList.add("active-tab");
+        signupText.classList.remove("active-tab");
+      }
+    }
+
+    function setTab(isSignup) {
+      document.getElementById("reg-log").checked = isSignup;
+      updateActiveTab();
+    }
+
+    window.onload = updateActiveTab;
+  </script>
+
+  <!-- LocalStorage Auth -->
+  <script>
+    function getUsersDB() {
+      return JSON.parse(localStorage.getItem("usersDB")) || {};
+    }
+    function saveUsersDB(db) {
+      localStorage.setItem("usersDB", JSON.stringify(db));
+    }
+
+    // Signup
+    document.getElementById("signupForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const full_name = formData.get("full_name");
+      const phone_number = formData.get("phone_number");
+      const email = formData.get("email");
+      const password = formData.get("password");
+
+      const db = getUsersDB();
+      if (db[email]) {
+        alert("User already exists!");
+        return;
+      }
+
+      db[email] = { full_name, phone_number, email, password, quiz_score: 0 };
+      saveUsersDB(db);
+
+      alert("Signup successful!");
+      setTab(false);
+      this.reset();
+    });
+
+    // Login
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const email = formData.get("email");
+      const password = formData.get("password");
+
+      const db = getUsersDB();
+      const user = db[email];
+
+      if (!user || user.password !== password) {
+        alert("Invalid credentials!");
+        return;
+      }
+
+      localStorage.setItem("userName", user.full_name);
+      localStorage.setItem("userPhoneNumber", user.phone_number);
+      localStorage.setItem("userEmail", user.email);
+      localStorage.setItem("quizScore", user.quiz_score);
+
+      alert("Welcome, " + user.full_name + "!");
+      window.location.href = "./home.html";
+    });
+  </script>
+</body>
+</html>

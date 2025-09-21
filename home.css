@@ -1,0 +1,314 @@
+/* ================= General Reset ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Orbitron', sans-serif;
+    background: #1f1f2b;
+    color: #d3d3d3;
+    overflow: hidden;
+}
+
+/* ================= Flex Container ================= */
+.container-fluid {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(145deg, #2a2a3a, #1f1f2b);
+    transition: all 0.3s ease;
+}
+
+/* ================= Sidebar ================= */
+.sidebar {
+    width: 280px;
+    background: linear-gradient(180deg, #3a0072 0%, #5a00a8 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    color: #fff;
+    height: 100%;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
+    border-right: 2px solid rgba(255,255,255,0.15);
+    transition: all 0.3s ease;
+}
+
+.sidebar img {
+    height: 80px;
+    width: 80px;
+    border-radius: 20%;
+    align-self: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.sidebar h3 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
+.sidebar ul {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.sidebar ul li {
+    padding: 18px 28px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-left: 4px solid transparent;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    transition: all 0.25s ease;
+    box-shadow: inset 0 0 0 rgba(0,0,0,0);
+}
+
+.sidebar ul li:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    border-left: 6px solid #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.sidebar ul li.active {
+    background-color: rgba(255,255,255,0.15);
+    color: #fff;
+    border-left: 6px solid #fff;
+}
+
+/* ================= Main Content ================= */
+.main-content {
+    flex-grow: 1;
+    background: linear-gradient(145deg, #2a2a3a, #1f1f2b);
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* ================= Content Cards ================= */
+.content-card {
+    background-color: #2e2e3f;
+    padding: 30px;
+    margin: 0 auto 25px auto;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    max-width: 900px;
+    width: 90%;
+    color: #d3d3d3;
+    font-size: 1.1rem;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    flex-shrink: 0;
+}
+
+.content-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.content-card iframe {
+    width: 100%;
+    height: 700px;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    background-color: #1f1f2b;
+}
+
+/* ================= Chatbot Section ================= */
+#chatbotDescription, #chatbotFrameContainer {
+    background-color: #2e2e3f;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    max-width: 900px;
+    width: 90%;
+    margin: 25px auto;
+    color: #d3d3d3;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+#chatbotDescription .btn-primary {
+    background: linear-gradient(90deg, #8e44ad 0%, #6f3df5 100%);
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 14px 28px;
+    border-radius: 14px;
+    transition: transform 0.25s ease, background 0.25s ease;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+#chatbotDescription .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+#chatbotFrameContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+    border-radius: 20px;
+}
+
+#chatbotFrameContainer iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    background-color: #1f1f2b;
+}
+
+/* ================= Headings ================= */
+h1, h2, h3 {
+    color: #d8b0ff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 1.9rem; }
+h3 {  font-size: 1.5rem; }
+/* ================= Buttons ================= */
+.btn-danger {
+    background-color: #c0392b;
+    border: none;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 50%;
+    margin: 50px auto;
+    display: block;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.btn-danger:hover {
+    background-color: #e74c3c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.btn-danger:active {
+    transform: translateY(2px);
+}
+
+/* ================= Quiz Section ================= */
+.quiz-container {
+    width: 90%;
+    max-width: 100%;
+    margin: 25px auto 50px auto;
+    padding: 25px;
+    background-color: #2e2e3f;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    animation: fadeIn 0.5s ease;
+}
+
+.quiz-card {
+    background: #3a3a4a;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #d3d3d3;
+}
+
+.quiz-card:hover {
+    transform: scale(1.015);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    background-color: #6f3df5;
+    font-size: 1.15rem;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 10px 0;
+    transition: background-color 0.25s, transform 0.15s;
+    color: #fff;
+}
+
+.option-btn:hover {
+    background-color: #ff9f2f;
+    transform: scale(1.03);
+    color: #fff;
+}
+
+.option-btn:active {
+    transform: scale(0.97);
+}
+
+/* ================= Progress Bar ================= */
+#progressContainer {
+    width: 100%;
+    background: #3a3a4a;
+    border-radius: 12px;
+    margin: 20px 0;
+    height: 14px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #38d77a;
+    border-radius: 12px;
+    transition: width 0.3s ease;
+}
+
+/* ================= Animations ================= */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+    .container-fluid { flex-direction: column; padding: 10px; }
+    .sidebar { width: 100%; margin-bottom: 15px; padding: 30px 15px; }
+    .main-content { padding: 15px; max-height: 80vh; }
+    .content-card { width: 95%; padding: 20px; }
+    .content-card iframe { height: 400px; }
+    #chatbotFrameContainer { height: 400px; }
+    .sidebar h3 { font-size: 1.8rem; margin-bottom: 30px; }
+    .btn-danger { width: 70%; margin: 40px auto; }
+}
+
+
