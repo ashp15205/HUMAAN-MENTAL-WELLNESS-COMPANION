@@ -5,6 +5,9 @@
 This project leverages AI and Google Cloud’s generative AI to deliver personalized mental health support, helping students manage stress, reduce anxiety, and develop healthier routines. By providing consistent, culturally sensitive guidance in a safe and private environment, HuMaan empowers students to cultivate emotional resilience, promote long-term well-being, and foster personal growth.
 
 ---
+## 🌐 Live Demo
+
+[![Deploy with Vercel](https://vercel.com/button)](https://humaan-mental-wellness-companion.vercel.app/)
 
 ## 🎯 Objectives of This Project
 
