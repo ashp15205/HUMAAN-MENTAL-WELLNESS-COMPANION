@@ -65,7 +65,7 @@ f. Consultants
 
 | Layer              | Technology / Tools                         |
 |--------------------|---------------------------------------------|
-| **Frontend**       | ReactJS, HTML5, CSS3, JavaScript (ES6+)    |
+| **Frontend**       | ReactJS    |
 | **Backend**        | FastAPI (Python)                           |
 | **AI Models**      | Google Gen AI (Generative AI)              |
 | **Database**       | MongoDB                                    |
