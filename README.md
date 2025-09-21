@@ -112,11 +112,19 @@ f. Consultants
 ---
 
 
-## 📌 Future Scope
+## 🔮 Future Scope
 
-- ✅ Integration with licensed mental health professionals  
-- 💬 Real-time chat support  
-- 🎮 Gamification of tasks and rewards  
-- 👥 Peer support forums and community engagement tools
+1. **Backend Enhancements**  
+   - Integrate a robust backend using FastAPI or Django to manage user data, sessions, and secure authentication.  
+   - Implement real-time chat and notifications for immediate mental wellness support.  
+   - Add analytics to monitor user engagement and adapt personalized recommendations.
 
----
+2. **Cloud Integration**  
+   - Deploy the backend and AI services on Google Cloud for scalability, security, and high availability.  
+   - Use Google Cloud Functions, Firestore, or App Engine to manage user sessions and AI computations.  
+   - Integrate cloud storage for user data, logs, and analytics.
+
+3. **AI Model Expansion**  
+   - Expand AI capabilities with more advanced generative AI for personalized advice.  
+   - Add natural language understanding for better conversational support.  
+   - Incorporate sentiment analysis to track user emotional state and provide targeted recommendations.
