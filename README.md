@@ -1,8 +1,8 @@
 # 💚 HuMaan: AI-Powered Mental Health Support for Students
 
-**HuMaan** is an AI-driven mental health support system designed specifically for students. With increasing academic pressures like assignments, exams, and practicals — alongside unhealthy habits such as irregular sleep and poor nutrition — students often experience a decline in both mental and physical well-being.
+**HuMaan** is an AI-driven, confidential, and empathetic mental wellness platform designed specifically for students and young adults. Facing intense academic pressures — such as assignments, exams, and practicals — alongside lifestyle challenges like irregular sleep and poor nutrition, many students experience a decline in both mental and physical well-being.
 
-This project introduces an AI-integrated platform that provides personalized mental health support to help students manage stress, reduce anxiety, and promote healthier lifestyles. Over time, these small yet consistent improvements contribute to long-term emotional stability and personal growth.
+This project leverages AI and Google Cloud’s generative AI to deliver personalized mental health support, helping students manage stress, reduce anxiety, and develop healthier routines. By providing consistent, culturally sensitive guidance in a safe and private environment, HuMaan empowers students to cultivate emotional resilience, promote long-term well-being, and foster personal growth.
 
 ---
 
