@@ -32,35 +32,6 @@ This project leverages AI and Google Cloud’s generative AI to deliver personal
 ![Workflow](https://github.com/user-attachments/assets/07825e3c-08dc-4f11-b56f-08b2d53b3094)
 
 ---
-
-## 🖼️ Screenshots
-
-a. Login Page
-
-
-
-b. Quiz Section
-
-
- 
-c. Profile Section
-
-
- 
-d. AI Chatbot
-
-
- 
-e. Resources Section
-
-
- 
-f. Consultants
- 
-
-
----
-
 ## 🛠️ Tech Stack
 
 | Layer              | Technology / Tools                         |
